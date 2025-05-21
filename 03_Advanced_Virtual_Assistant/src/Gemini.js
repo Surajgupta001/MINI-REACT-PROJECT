@@ -1,10 +1,14 @@
-const apiKey = "AIzaSyD1qlSBtjzQQ4bp36OkPze9aFebaU2IPj4";
-
 import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
 } from "@google/generative-ai";
+
+// For Vite projects:
+const apiKey = import.meta.env.VITE_REACT_APP_GEMINI_API_KEY;
+
+// For Create React App, keep using process.env but ensure the variable is prefixed with REACT_APP_ and defined in your .env file
+// const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
 
 const genAI = new GoogleGenerativeAI(apiKey);
 
